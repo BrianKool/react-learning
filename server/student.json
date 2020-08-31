@@ -1,0 +1,24 @@
+{
+  "student": [
+    {
+      "id": 0,
+      "name": "Brian",
+      "Major": "Cyber Security"
+    },
+    {
+      "id": 1,
+      "name": "James",
+      "Major": "Accounting"
+    },
+    {
+      "id": 2,
+      "name": "Julian",
+      "Major": "Accounting"
+    },
+    {
+      "id": "3",
+      "name": "Una",
+      "Major": "Cyber Security"
+    }
+  ]
+}
