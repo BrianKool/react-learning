@@ -18,21 +18,7 @@ const StudentForm = ({updateFn}) => {
         // The checkbox, look at the checked property to see if it 
         // is checked or not, then add or remove as necessary
         let major = formInfo.Major
-        console.log(event.target.checked, major)
-        if (event.target.checked) {
-            // add it to the list if not present
-            if (!major.includes(event.target.value)) {
-                console.log("added to the list of offerings")
-                major = [...formInfo.Major, event.target.value]
-            } 
-        } else {
-            // remove it from the list if present
-            if (major.includes(event.target.value)) {
-                console.log("removed from the list of offerings")
-                major = major.filter(o => o !== event.target.value)
-            }
-        }
-        console.log("his/her Major is: ", major)
+        console.log("the click major is: ",event.target.checked, major)
         setFormInfo({...formInfo, Major: major})
     }
 } 

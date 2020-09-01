@@ -19,6 +19,44 @@
       "id": "3",
       "name": "Una",
       "Major": "Cyber Security"
+    },
+    {
+      "newStudent": {
+        "id": "4",
+        "name": "Kobe Bryant",
+        "Major": [
+          "Cyber Security"
+        ]
+      },
+      "id": "UjQBjca"
+    },
+    {
+      "newStudent": {
+        "id": "",
+        "name": "",
+        "Major": [
+          "Accounting"
+        ]
+      },
+      "id": "E6f2PGh"
+    },
+    {
+      "newStudent": {
+        "id": "5",
+        "name": "yo",
+        "Major": [
+          "Machenical Engineering"
+        ]
+      },
+      "id": "mcFX9zw"
+    },
+    {
+      "newStudent": {
+        "id": "4",
+        "name": "Ting-An Ku",
+        "Major": []
+      },
+      "id": "sWx7mxP"
     }
   ]
 }

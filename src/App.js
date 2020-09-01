@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import axios from 'axios'
 import StudentForm from "./StudentForm.js"
+import studentsServices from './serverces/axiosResponse';
 
 const List = (props) => {
   return(
@@ -22,21 +22,22 @@ const App = () => {
  const studentsToShow = showAllStudents ? students : students.filter(students => students.Major === 'Accounting')
 
   const addStudent = (newStudent) => {
-
-    axios.post("http://localhost:3001/student", newStudent)
-    .then(response => {
-      console.log("POST response", response)
-      setStudents([...students, response.data])
-    })
+    studentsServices.create({newStudent: newStudent})
+    .then(object => {
+      console.log("POST response", object)
+      setStudents([...students, object])
+      console.log("new thing added", object)
+    }
+    )
   }
 
 
   useEffect(() => {
     console.log("effect is being run")
-    axios.get("http://localhost:3001/student")
-    .then(response => {
-      console.log("we have a response", response)
-      setStudents(response.data)
+    studentsServices.getAll()
+    .then(objects => {
+      console.log("we have a response", objects)
+      setStudents(objects)
     })
   },[]
   )
